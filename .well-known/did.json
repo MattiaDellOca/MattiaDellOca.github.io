@@ -1,0 +1,48 @@
+{
+  "id": "did:web:mattiadelloca.github.io",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:mattiadelloca.github.io"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://mattiadelloca.github.io/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/206c632f-f505-4df7-9aca-156613464038"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#3d16367983b44d73a3368d9266d5d5e6vcSigningKey-36447",
+      "controller": "did:web:mattiadelloca.github.io",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "LZ_GisdC9o-cPXK9HPME4aLF542G_QznhwRdX5-XXu4",
+        "y": "rSPNAIRPqR0oJXrYy0WalJWiQhuTBW8KkYcjXgDdl8M"
+      }
+    }
+  ],
+  "authentication": [
+    "#3d16367983b44d73a3368d9266d5d5e6vcSigningKey-36447"
+  ],
+  "assertionMethod": [
+    "#3d16367983b44d73a3368d9266d5d5e6vcSigningKey-36447"
+  ]
+}
